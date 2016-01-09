@@ -1,0 +1,19 @@
+@mixin mobile {
+	@media only screen and (max-width: 600px) {
+		@content ;
+	}
+}
+
+@mixin font($fz, $lh: false, $family: false) {
+	font-size: $fz;
+	@if $lh == false {
+		line-height: round($fz * 1.4);
+	} @else {
+		line-height: $lh;
+	}
+	@if $family == false {
+		font-family: $font1;
+	} @else {
+		font-family: $family;
+	}
+}

@@ -1,0 +1,32 @@
+// Button
+//.st-button {
+//	border-radius: 100px;
+//	background-color: #55c2af;
+//	td {
+//		padding: 10px 20px;
+//	}
+//	a {
+//		color: #ffffff;
+//		text-decoration: none;
+//		@include font(12px, 14px, $font1);
+//		font-weight: 700;
+//	}
+//}
+//.st-button-text {
+//
+//}
+.st-button {
+	display: inline-block;
+	color: #ffffff !important;
+	background-color: #55c2af;
+	border-radius: 100px;
+	text-decoration: none;
+	border: 10px solid #55c2af;
+	@include font(12px, 14px, $font1);
+
+	span {
+		color: #ffffff;
+		border-left: #55c2af 20px solid;
+    border-right: #55c2af 20px solid;
+	}
+}

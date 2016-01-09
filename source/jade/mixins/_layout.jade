@@ -1,0 +1,73 @@
+//- Main wrapper =>  +wrapper('default', '#ffffff');
+mixin wrapper(bgcolor, bgcolorIn)
+
+	- var bgcolorIn = (typeof bgcolorIn === 'undefined') ? bgcolor : bgcolorIn
+	- var width = gContainer
+
+	center
+		table(cellpadding="0", cellspacing="0", border="0", width="100%", bgcolor=bgcolor, align="center")
+			tr
+				+td('center', 'top', '100%')
+					|<!--[if (gte mso 9)|(IE)]><table width="#{width}" align="center"><tr><td><![endif]-->
+					table&attributes(attributes)(cellpadding="0", cellspacing="0", border="0", bgcolor=bgcolorIn, width="100%", style="max-width: #{width}px")
+							tr
+								+td
+									block
+					|<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
+
+//- Main wrapper bg image fill
+mixin wrapper-bg(bgcolor, bgcolorIn, url, imgW, imgH)
+
+	- var width = gContainer
+	- var bgcolorIn = (typeof bgcolorIn === 'undefined') ? bgcolor : bgcolorIn
+
+	center
+		table(cellpadding="0", cellspacing="0", border="0", width="100%", bgcolor=bgcolor, align="center")
+			tr
+				+td('center', 'top', '100%')
+					| <!--[if (gte mso 9)|(IE)]><table width="#{width}" align="center"><tr><td><![endif]-->
+					table&attributes(attributes)(cellpadding="0", cellspacing="0", border="0", bgcolor=bgcolorIn, width="100%", style="max-width: #{width}px", background="#{url}" ).m-cover
+						tr
+							+td(background="#{url}").m-cover
+								| <!--[if (gte mso 9)|(IE)]> <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:#{imgW}px;height:#{imgH}px;"> <v:fill type="tile" src="#{url}" color="#{bgcolorIn}" /> <v:textbox inset="0,0,0,0"> <![endif]-->
+								block
+								| <!--[if (gte mso 9)|(IE)]> </v:textbox> </v:rect> <![endif]-->
+					| <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
+//- Table block mixin
+mixin table(width, bgcolor)
+	- var width = (typeof width === 'undefined') ? "100%" : width
+	table&attributes(attributes)(cellpadding="0", cellspacing="0", border="0", width="#{width}", bgcolor=bgcolor)
+		block
+
+//- Table align mixin
+mixin table-align(align)
+	table&attributes(attributes)(cellpadding="0", cellspacing="0", border="0", align=align)
+		block
+
+//- td block mixin
+//- td(width="44%" valign="top" align="left")
+mixin td(align, valign, width)
+	- var valign = (typeof valign === 'undefined') ? "top" : valign
+	td&attributes(attributes)(align=align, valign=valign, width=width)
+		block
+
+//- row column
+mixin row
+	.st-columns&attributes(attributes)
+		block
+
+//- center table-td
+mixin center()
+	table(cellpadding="0", cellspacing="0", border="0", width="100%")
+		tr
+			td&attributes(attributes)(valign="top", align="center", width="100%")
+				block
+
+//- paddings div
+//- +roll(40)
+//- <div class="padd16" style="font-size: 16px; line-height: 16px; height: 16px;">&nbsp;</div>
+mixin roll(height)
+	- var height = (typeof height === 'undefined') ? "10" : height
+	div&attributes(attributes)(style="font-size: #{height}px; line-height: #{height}px; height: #{height}px;") &nbsp;

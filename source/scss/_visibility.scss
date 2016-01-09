@@ -1,0 +1,36 @@
+/*Visibility desktop*/
+.hide,
+.mobile-only {
+	font-size: 0;
+	line-height: 0;
+	display: none;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	float: left;
+	max-width: 0;
+	max-height: 0;
+	mso-hide: all;
+}
+
+/*Visibility mobile*/
+.m-hide {
+	@include mobile {
+		display: none !important;
+	}
+}
+.mobile-only {
+	@include mobile {
+		visibility: visible !important;
+		height: auto !important;
+		max-width: none !important;
+		max-height: none !important;
+		display: block !important;
+		width: auto !important;
+		float: none !important;
+		overflow: visible !important;
+	}
+}

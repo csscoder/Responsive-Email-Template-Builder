@@ -1,0 +1,64 @@
+body {
+	margin: 0;
+}
+
+.st-bodycolor {
+	background-color: $bodyColor;
+}
+
+.st-columns {
+	font-size: 0;
+	text-align: center;
+}
+
+.column,
+.m-wide {
+	width: 100%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	@include mobile {
+		max-width: 100% !important;
+	}
+}
+
+.column {
+	&.first > table td,
+	&.last > table td,
+	&.inner > table td {
+		@include mobile {
+			padding-left: 20px !important;
+			padding-right: 20px !important;
+		}
+	}
+}
+
+.m-tcenter {
+	@include mobile {
+		margin: 0 auto !important;
+		float: none;
+	}
+}
+
+.wrapper {
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100% !important;
+	-ms-text-size-adjust: 100% !important;
+}
+
+.m-cover {
+	@include mobile {
+		background-size: cover;
+		background-position: 50% 0;
+	}
+}
+
+.m-full {
+	@include mobile {
+		width: 100% !important;
+		max-width: 100% !important;
+		min-width: 124px !important;
+		height: auto;
+		clear: both;
+	}
+}

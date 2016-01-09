@@ -1,0 +1,49 @@
+/* fonts combo */
+$font1: Helvetica, Arial, sans-serif;
+$font2: Tahoma, Geneva, sans-serif;
+$font3: Georgia, serif;
+$font4: "Times New Roman", Times, serif;
+$font5: "Trebuchet MS", Helvetica, sans-serif;
+$font6: "Arial Black", Gadget, sans-serif;
+$font7: "Comic Sans MS", cursive, sans-serif;
+$font5: Impact, Charcoal, sans-serif;
+$font9: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+$font10: Verdana, Geneva, sans-serif;
+$font11: "Courier New", Courier, monospace;
+$font12: "Lucida Console", Monaco, monospace;
+$font13: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+/* padding class */
+/* .pt22 => padding-top: 22px; */
+@for $i from 0 through 50 {
+	@if $i % 5 == 0 {
+		.pt#{$i} {
+			padding-top: #{$i}px;
+		}
+	}
+}
+
+@for $i from 0 through 50 {
+	@if $i % 5 == 0 {
+		.pl#{$i} {
+			padding-left: #{$i}px;
+		}
+	}
+}
+
+@for $i from 0 through 50 {
+	@if $i % 5 == 0 {
+		.pr#{$i} {
+			padding-right: #{$i}px;
+		}
+	}
+}
+
+@for $i from 0 through 50 {
+	@if $i % 5 == 0 {
+		.pb#{$i} {
+			padding-bottom: #{$i}px;
+		}
+	}
+}
+

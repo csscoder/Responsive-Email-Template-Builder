@@ -1,0 +1,45 @@
+//- ********************************
+//- Columns width gutter
+//- ********************************
+
+//- first column in row
+mixin column-first(column)
+	- var width = Math.floor((gContainer / gColumns) * column)
+	|<!--[if (gte mso 9)|(IE)]> <table width="100%" cellpadding="0" cellspacing="0"><tr><td width="#{width}" valign="top"> <![endif]-->
+	.column.first&attributes(attributes)(style="max-width: #{width}px;")
+		+table
+			tr
+				+td(style="padding-left: #{gGutter}px; padding-right: #{gGutter / 2}px")
+					block
+
+//- inner column in row
+mixin column(column)
+	- var width = Math.floor((gContainer / gColumns) * column);
+	|<!--[if (gte mso 9)|(IE)]> </td><td width="#{width}" valign="top"> <![endif]-->
+	.column.inner&attributes(attributes)(style="max-width: #{width}px;")
+		+table
+			tr
+				+td(style="padding-left: #{gGutter/2}px; padding-right: #{gGutter/2}px")
+					block
+
+//- last column in row
+mixin column-last(column)
+	- var width = Math.floor((gContainer / gColumns) * column);
+	|<!--[if (gte mso 9)|(IE)]> </td><td width="#{width}" valign="top"> <![endif]-->
+	.column.last&attributes(attributes)(style="max-width: #{width}px;")
+		+table
+			tr
+				+td(style="padding-left: #{gGutter / 2}px; padding-right: #{gGutter}px")
+					block
+	|<!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->
+
+//- alone column in row
+mixin column-alone(column)
+	- var width = Math.floor((gContainer / gColumns) * column);
+	|<!--[if (gte mso 9)|(IE)]> <table width="100%" cellpadding="0" cellspacing="0"><tr><td valign="top"> <![endif]-->
+	.column.alone&attributes(attributes)(style="max-width: #{width}px;")
+		+table
+			tr
+				+td(style="padding-left: #{gGutter}px; padding-right: #{gGutter}px")
+					block
+	|<!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->

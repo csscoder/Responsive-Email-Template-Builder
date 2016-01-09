@@ -1,0 +1,46 @@
+//- +a('http://ya.ru') link   -->  <a href="http://ya.ru" target="_blank">...</a>
+//- not for text link
+//- view bellow
+mixin a(link)
+	- var link = (typeof link === 'undefined') ? "#3" : link
+	a&attributes(attributes)(href=link, target="_blank")
+		block
+
+//- +a('http://ya.ru') link   -->  <a href="http://ya.ru" target="_blank"><span>link</span></a>
+//- text link
+mixin a-text(link)
+	- var link = (typeof link === 'undefined') ? "#3" : link
+	a&attributes(attributes)(href=link, target="_blank")
+		span
+			block
+
+
+//- +img('img/logo.png', 100, 200) -->
+//- <img src="img/logo.png" width="100" height="200" border="0" style="display:block; line-height: 100%;" />
+mixin img(src, width, height, alt)
+	if alt
+		img&attributes(attributes)(src=src, width=width, height=height, border="0", style="display:block; line-height: 100%;", alt=alt)
+	else
+		img&attributes(attributes)(src=src, width=width, height=height, border="0", style="display:block; line-height: 100%;")
+
+//- +img-inline('img/logo.png', 100, 200) -->
+//- <img src="img/logo.png" width="100" height="200" border="0" style="vertical-align: top;" />
+mixin img-inline(src, width, height, alt)
+	if alt
+		img&attributes(attributes)(src=src, width=width, height=height, border="0", style="vertical-align: top;", alt=alt)
+	else
+		img&attributes(attributes)(src=src, width=width, height=height, border="0", style="vertical-align: top;")
+
+
+//- hr
+mixin hr(color, height, width)
+	- var width = (typeof width === 'undefined') ? "100%" : width
+	table(cellpadding="0", cellspacing="0", border="0", width="#{width}", bgcolor=color, align="center")
+		tr
+			td
+				+roll(height)
+
+mixin button(link)
+	a&attributes(attributes)(href="#{link}", target="_blank").st-button
+		span
+			block
