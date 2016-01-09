@@ -1,10 +1,10 @@
 {
-  "name": "email-builder-pro",
-  "version": "1.0.0",
+  "name": "Responsive-Email-Template-Builder",
+  "version": "1.0.1",
   "description": "System build email template, simple email framework, use robust preprocessors.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/csscoderRU/email-builder-pro.git"
+    "url": "git+https://github.com/csscoderRU/Responsive-Email-Template-Builder.git"
   },
   "keywords": [
     "e-mail",
@@ -14,9 +14,9 @@
   "author": "Alexander Zidyganov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/csscoderRU/email-builder-pro/issues"
+    "url": "https://github.com/csscoderRU/Responsive-Email-Template-Builder/issues"
   },
-  "homepage": "https://github.com/csscoderRU/email-builder-pro#readme",
+  "homepage": "https://github.com/csscoderRU/Responsive-Email-Template-Builder#readme",
   "devDependencies": {
     "browser-sync": "^2.10.1",
     "css-mqpacker": "^4.0.0",
