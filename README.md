@@ -1,5 +1,7 @@
-# Extendable responsive Email template (framework)
+# Responsive Email template (extendable, framework)
 Build system use SASS, JADE preprocessors. Base is Gulp.js
+
+![CSSCODER email template](https://github.com/csscoderRU/email-builder-pro/tree/master/screens/thumb.png)
 
 ### Example [link](http://works.csscoder.pro/emails/email-builder-pro_1.0.0/index.html)
 
@@ -36,3 +38,5 @@ Template tests from Litmus.com
 * Android, gmail.app
 * iOS
 * popular web clients
+
+Screens folder [link](https://github.com/csscoderRU/email-builder-pro/tree/master/screens/)
