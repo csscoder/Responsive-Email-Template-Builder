@@ -8,13 +8,12 @@ mixin wrapper(bgcolor, bgcolorIn)
 		table(cellpadding="0", cellspacing="0", border="0", width="100%", bgcolor=bgcolor, align="center")
 			tr
 				+td('center', 'top', '100%')
-					|<!--[if (gte mso 9)|(IE)]><table width="#{width}" align="center"><tr><td><![endif]-->
-					table&attributes(attributes)(cellpadding="0", cellspacing="0", border="0", bgcolor=bgcolorIn, width="100%", style="max-width: #{width}px")
-							tr
-								+td
-									block
-					|<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-
+					| <!--[if (gte mso 9)|(IE)]><table width="#{width}" align="center"><tr><td><![endif]-->
+					table&attributes(attributes)(cellpadding="0", cellspacing="0", border="0", bgcolor=bgcolorIn, width="100%", style="max-width: #{width}px; background-color: #{bgcolorIn};")
+						tr
+							+td()(bgcolor=bgcolorIn, style="background-color: #{bgcolorIn}")
+								block
+					| <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
 
 //- Main wrapper bg image fill
 mixin wrapper-bg(bgcolor, bgcolorIn, url, imgW, imgH)
@@ -71,3 +70,14 @@ mixin center()
 mixin roll(height)
 	- var height = (typeof height === 'undefined') ? "10" : height
 	div&attributes(attributes)(style="font-size: #{height}px; line-height: #{height}px; height: #{height}px;") &nbsp;
+
+
+//- Main wrapper bg image fill
+mixin table-img(bgcolor, url, imgW, imgH)
+	+table&attributes(attributes)
+		tr
+			td(background="#{url}" bgcolor="#{bgcolor}" valign="top", style="background: url('#{url}'); background-repeat: no-repeat; background-color: #{bgcolor};").m-cover.m-td-img
+				| <!--[if gte mso 9]> <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" strokecolor="none" style="width:#{imgW}px;height:#{imgH}px;"><v:fill type="tile" src="#{url}" color="#{bgcolor}" /><v:textbox inset="0,0,0,0"><![endif]-->
+				div
+					block
+				| <!--[if gte mso 9]></v:textbox></v:rect><![endif]-->

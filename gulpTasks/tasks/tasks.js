@@ -12,7 +12,7 @@ gulp.task('default', function (cb) {
 // Final task (ftp upload, inliner)
 gulp.task('final', function (cb) {
 	runSequence(
-		['jade-final','scss','images'],
+		['jade-final','images'],
 		'postcss',
 		'include-style',
 		'inliner',
@@ -21,28 +21,3 @@ gulp.task('final', function (cb) {
 		cb
 	);
 });
-
-//
-//// Final task (send)
-//gulp.task('send', function (cb) {
-//	runSequence(
-//		['jade-final','postcss','images'],
-//		'include-style',
-//		'inliner',
-//		'include-style-html',
-//		'send-mail',
-//		cb
-//	);
-//});
-//
-//// Final task (sendWEB)
-//gulp.task('send-web', function (cb) {
-//	runSequence(
-//		['jade-final','postcss','images'],
-//		'include-style',
-//		'inliner',
-//		'include-style-html',
-//		'send-mail-web',
-//		cb
-//	);
-//});

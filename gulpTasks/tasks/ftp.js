@@ -10,9 +10,9 @@ gulp.task('ftp', function (cb) {
 			host: access.host,
 			user: access.user,
 			pass: access.pass,
-			remotePath: '/emails/' + pkg.name + '_' + pkg.version + '/'
+			remotePath: '/www/emails/' + pkg.name + '/'
 		}))
 		.on('finish', function () {
-			console.log(access.site + '/emails/' + pkg.name + '_' + pkg.version + '/index.html');
+			console.log(access.site + '/emails/' + pkg.name + '/index.html');
 		});
 });

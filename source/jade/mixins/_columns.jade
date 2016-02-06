@@ -3,43 +3,111 @@
 //- ********************************
 
 //- first column in row
-mixin column-first(column)
-	- var width = Math.floor((gContainer / gColumns) * column)
-	|<!--[if (gte mso 9)|(IE)]> <table width="100%" cellpadding="0" cellspacing="0"><tr><td width="#{width}" valign="top"> <![endif]-->
+mixin column-first(column, columnCommon )
+	- var width = Math.floor(( (gContainer - gGutter) / gColumns) * column)
+	- var columnCommon = (typeof columnCommon === 'undefined') ? "100%" : Math.floor((gContainer / gColumns) * columnCommon)
+	| <table cellpadding="0" cellspacing="0" width="100%"><tr> <td style="padding-left: #{gGutter / 2}px; padding-right: #{gGutter / 2}px;" valign="top" align="center"><div class="st-columns">
+	| <!--[if (gte mso 9)|(IE)]> <table width="#{columnCommon}" cellpadding="0" cellspacing="0"><tr><td width="#{width}" valign="top"> <![endif]-->
 	.column.first&attributes(attributes)(style="max-width: #{width}px;")
 		+table
 			tr
-				+td(style="padding-left: #{gGutter}px; padding-right: #{gGutter / 2}px")
+				+td(style="padding-left: #{gGutter / 2}px; padding-right: #{gGutter / 2}px").m-coll-td
 					block
 
 //- inner column in row
 mixin column(column)
-	- var width = Math.floor((gContainer / gColumns) * column);
-	|<!--[if (gte mso 9)|(IE)]> </td><td width="#{width}" valign="top"> <![endif]-->
+	- var width = Math.floor(((gContainer - gGutter) / gColumns) * column);
+	| <!--[if (gte mso 9)|(IE)]> </td><td width="#{width}" valign="top"> <![endif]-->
 	.column.inner&attributes(attributes)(style="max-width: #{width}px;")
 		+table
 			tr
-				+td(style="padding-left: #{gGutter/2}px; padding-right: #{gGutter/2}px")
+				+td(style="padding-left: #{gGutter / 2}px; padding-right: #{gGutter / 2}px").m-coll-td
 					block
 
 //- last column in row
 mixin column-last(column)
-	- var width = Math.floor((gContainer / gColumns) * column);
-	|<!--[if (gte mso 9)|(IE)]> </td><td width="#{width}" valign="top"> <![endif]-->
+	- var width = Math.floor(((gContainer - gGutter) / gColumns) * column);
+	| <!--[if (gte mso 9)|(IE)]> </td><td width="#{width}" valign="top"> <![endif]-->
 	.column.last&attributes(attributes)(style="max-width: #{width}px;")
 		+table
 			tr
-				+td(style="padding-left: #{gGutter / 2}px; padding-right: #{gGutter}px")
+				+td(style="padding-left: #{gGutter / 2}px; padding-right: #{gGutter / 2}px").m-coll-td
 					block
-	|<!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->
+	| <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->
+	| </div></td></tr></table>
 
 //- alone column in row
 mixin column-alone(column)
 	- var width = Math.floor((gContainer / gColumns) * column);
-	|<!--[if (gte mso 9)|(IE)]> <table width="100%" cellpadding="0" cellspacing="0"><tr><td valign="top"> <![endif]-->
+	| <!--[if (gte mso 9)|(IE)]> <table width="#{width}" cellpadding="0" cellspacing="0"><tr><td valign="top"> <![endif]-->
 	.column.alone&attributes(attributes)(style="max-width: #{width}px;")
 		+table
 			tr
-				+td(style="padding-left: #{gGutter}px; padding-right: #{gGutter}px")
+				+td(style="padding-left: #{gGutter}px; padding-right: #{gGutter}px").m-coll-td
 					block
-	|<!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->
+	| <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->
+
+
+//- ********************************
+//- Columns no gutter
+//- ********************************
+
+//- first column in row
+mixin fcolumn-first(column, columnCommon)
+	- var width = Math.floor((gContainer / gColumns) * column)
+	- var columnCommon = (typeof columnCommon === 'undefined') ? "100%" : Math.floor((gContainer / gColumns) * columnCommon)
+	| <!--[if (gte mso 9)|(IE)]> <table width="#{columnCommon}" cellpadding="0" cellspacing="0"><tr><td width="#{width}" valign="top"> <![endif]-->
+	.column.first&attributes(attributes)(style="max-width: #{width}px;")
+		block
+
+//- inner column in row
+mixin fcolumn(column)
+	- var width = Math.floor((gContainer / gColumns) * column);
+	| <!--[if (gte mso 9)|(IE)]> </td><td width="#{width}" valign="top"> <![endif]-->
+	.column.inner&attributes(attributes)(style="max-width: #{width}px;")
+		block
+
+//- last column in row
+mixin fcolumn-last(column)
+	- var width = Math.floor((gContainer / gColumns) * column);
+	| <!--[if (gte mso 9)|(IE)]> </td><td width="#{width}" valign="top"> <![endif]-->
+	.column.last&attributes(attributes)(style="max-width: #{width}px;")
+		block
+	| <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->
+
+//- alone column in row
+mixin fcolumn-alone(column)
+	- var width = Math.floor((gContainer / gColumns) * column);
+	| <!--[if (gte mso 9)|(IE)]> <table width="#{width}" cellpadding="0" cellspacing="0"><tr><td valign="top"> <![endif]-->
+	.column.alone&attributes(attributes)(style="max-width: #{width}px;")
+		block
+	| <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->
+
+//- ********************************
+//- Columns set width no gutter
+//- ********************************
+
+mixin scolumn-first(commonWidth, columnCommon)
+	| <!--[if (gte mso 9)|(IE)]> <table width="columnCommon" cellpadding="0" cellspacing="0"><tr><td width="#{commonWidth}" valign="top"> <![endif]-->
+	.column.first&attributes(attributes)(style="max-width: #{commonWidth}px;")
+		block
+
+//- inner column in row
+mixin scolumn(commonWidth)
+	| <!--[if (gte mso 9)|(IE)]> </td><td width="#{commonWidth}" valign="top"> <![endif]-->
+	.column.inner&attributes(attributes)(style="max-width: #{commonWidth}px;")
+		block
+
+//- last column in row
+mixin scolumn-last(commonWidth)
+	| <!--[if (gte mso 9)|(IE)]> </td><td width="#{commonWidth}" valign="top"> <![endif]-->
+	.column.last&attributes(attributes)(style="max-width: #{commonWidth}px;")
+		block
+	| <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->
+
+//- alone column in row
+mixin scolumn-alone(commonWidth)
+	| <!--[if (gte mso 9)|(IE)]> <table width="#{commonWidth}" cellpadding="0" cellspacing="0"><tr><td valign="top"> <![endif]-->
+	.column.alone&attributes(attributes)(style="max-width: #{commonWidth}px;")
+		block
+	| <!--[if (gte mso 9)|(IE)]> </td> </tr> </table> <![endif]-->

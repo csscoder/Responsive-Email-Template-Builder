@@ -39,32 +39,152 @@
 .pl0 {
   padding-left: 0px; }
 
+.pl1 {
+  padding-left: 1px; }
+
+.pl2 {
+  padding-left: 2px; }
+
+.pl3 {
+  padding-left: 3px; }
+
+.pl4 {
+  padding-left: 4px; }
+
 .pl5 {
   padding-left: 5px; }
+
+.pl6 {
+  padding-left: 6px; }
+
+.pl7 {
+  padding-left: 7px; }
+
+.pl8 {
+  padding-left: 8px; }
+
+.pl9 {
+  padding-left: 9px; }
 
 .pl10 {
   padding-left: 10px; }
 
+.pl11 {
+  padding-left: 11px; }
+
+.pl12 {
+  padding-left: 12px; }
+
+.pl13 {
+  padding-left: 13px; }
+
+.pl14 {
+  padding-left: 14px; }
+
 .pl15 {
   padding-left: 15px; }
+
+.pl16 {
+  padding-left: 16px; }
+
+.pl17 {
+  padding-left: 17px; }
+
+.pl18 {
+  padding-left: 18px; }
+
+.pl19 {
+  padding-left: 19px; }
 
 .pl20 {
   padding-left: 20px; }
 
+.pl21 {
+  padding-left: 21px; }
+
+.pl22 {
+  padding-left: 22px; }
+
+.pl23 {
+  padding-left: 23px; }
+
+.pl24 {
+  padding-left: 24px; }
+
 .pl25 {
   padding-left: 25px; }
+
+.pl26 {
+  padding-left: 26px; }
+
+.pl27 {
+  padding-left: 27px; }
+
+.pl28 {
+  padding-left: 28px; }
+
+.pl29 {
+  padding-left: 29px; }
 
 .pl30 {
   padding-left: 30px; }
 
+.pl31 {
+  padding-left: 31px; }
+
+.pl32 {
+  padding-left: 32px; }
+
+.pl33 {
+  padding-left: 33px; }
+
+.pl34 {
+  padding-left: 34px; }
+
 .pl35 {
   padding-left: 35px; }
+
+.pl36 {
+  padding-left: 36px; }
+
+.pl37 {
+  padding-left: 37px; }
+
+.pl38 {
+  padding-left: 38px; }
+
+.pl39 {
+  padding-left: 39px; }
 
 .pl40 {
   padding-left: 40px; }
 
+.pl41 {
+  padding-left: 41px; }
+
+.pl42 {
+  padding-left: 42px; }
+
+.pl43 {
+  padding-left: 43px; }
+
+.pl44 {
+  padding-left: 44px; }
+
 .pl45 {
   padding-left: 45px; }
+
+.pl46 {
+  padding-left: 46px; }
+
+.pl47 {
+  padding-left: 47px; }
+
+.pl48 {
+  padding-left: 48px; }
+
+.pl49 {
+  padding-left: 49px; }
 
 .pl50 {
   padding-left: 50px; }
@@ -72,32 +192,152 @@
 .pr0 {
   padding-right: 0px; }
 
+.pr1 {
+  padding-right: 1px; }
+
+.pr2 {
+  padding-right: 2px; }
+
+.pr3 {
+  padding-right: 3px; }
+
+.pr4 {
+  padding-right: 4px; }
+
 .pr5 {
   padding-right: 5px; }
+
+.pr6 {
+  padding-right: 6px; }
+
+.pr7 {
+  padding-right: 7px; }
+
+.pr8 {
+  padding-right: 8px; }
+
+.pr9 {
+  padding-right: 9px; }
 
 .pr10 {
   padding-right: 10px; }
 
+.pr11 {
+  padding-right: 11px; }
+
+.pr12 {
+  padding-right: 12px; }
+
+.pr13 {
+  padding-right: 13px; }
+
+.pr14 {
+  padding-right: 14px; }
+
 .pr15 {
   padding-right: 15px; }
+
+.pr16 {
+  padding-right: 16px; }
+
+.pr17 {
+  padding-right: 17px; }
+
+.pr18 {
+  padding-right: 18px; }
+
+.pr19 {
+  padding-right: 19px; }
 
 .pr20 {
   padding-right: 20px; }
 
+.pr21 {
+  padding-right: 21px; }
+
+.pr22 {
+  padding-right: 22px; }
+
+.pr23 {
+  padding-right: 23px; }
+
+.pr24 {
+  padding-right: 24px; }
+
 .pr25 {
   padding-right: 25px; }
+
+.pr26 {
+  padding-right: 26px; }
+
+.pr27 {
+  padding-right: 27px; }
+
+.pr28 {
+  padding-right: 28px; }
+
+.pr29 {
+  padding-right: 29px; }
 
 .pr30 {
   padding-right: 30px; }
 
+.pr31 {
+  padding-right: 31px; }
+
+.pr32 {
+  padding-right: 32px; }
+
+.pr33 {
+  padding-right: 33px; }
+
+.pr34 {
+  padding-right: 34px; }
+
 .pr35 {
   padding-right: 35px; }
+
+.pr36 {
+  padding-right: 36px; }
+
+.pr37 {
+  padding-right: 37px; }
+
+.pr38 {
+  padding-right: 38px; }
+
+.pr39 {
+  padding-right: 39px; }
 
 .pr40 {
   padding-right: 40px; }
 
+.pr41 {
+  padding-right: 41px; }
+
+.pr42 {
+  padding-right: 42px; }
+
+.pr43 {
+  padding-right: 43px; }
+
+.pr44 {
+  padding-right: 44px; }
+
 .pr45 {
   padding-right: 45px; }
+
+.pr46 {
+  padding-right: 46px; }
+
+.pr47 {
+  padding-right: 47px; }
+
+.pr48 {
+  padding-right: 48px; }
+
+.pr49 {
+  padding-right: 49px; }
 
 .pr50 {
   padding-right: 50px; }
@@ -159,37 +399,41 @@ body {
   -webkit-text-size-adjust: 100% !important;
   -ms-text-size-adjust: 100% !important; }
 
+.m-cover {
+  background-size: cover;
+  background-position: 50% 0; }
+
 /* Headings */
 .txt-h1 {
   font-size: 36px;
   line-height: 50px;
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif; }
 
 .txt-h2 {
   font-size: 30px;
   line-height: 42px;
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif; }
 
 .txt-h3 {
   font-size: 24px;
   line-height: 32px;
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif; }
 
 .txt-h4 {
   font-size: 20px;
   line-height: 28px;
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif; }
 
 .txt-h5 {
   font-size: 16px;
   line-height: 22px;
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif; }
 
 /*Paragraph*/
 .txt-p {
   font-size: 14px;
   line-height: 18px;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   padding-top: 10px;
   padding-bottom: 10px; }
 
@@ -209,7 +453,7 @@ body {
 .title {
   font-size: 40px;
   line-height: 50px;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: #ffffff; }
 
@@ -217,19 +461,19 @@ body {
   color: #ffffff;
   font-size: 11px;
   line-height: 16px;
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif; }
 
 .group-title {
   font-size: 16px;
   line-height: 20px;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: #40474e;
   font-weight: 700; }
 
 .group-text {
   font-size: 14px;
   line-height: 20px;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: #787b80; }
   .group-text a {
     color: #57c3af;
@@ -239,7 +483,7 @@ body {
   color: #aaacaf;
   font-size: 12px;
   line-height: 16px;
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif; }
   .st-footer a {
     text-decoration: underline !important;
     color: #aaacaf; }
@@ -268,6 +512,9 @@ body {
 
 /*Visibility mobile*/
 
+table {
+  border-collapse: collapse; }
+
 .st-button {
   display: inline-block;
   color: #ffffff !important;
@@ -277,7 +524,7 @@ body {
   border: 10px solid #55c2af;
   font-size: 12px;
   line-height: 14px;
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif; }
   .st-button span {
     color: #ffffff;
     border-left: #55c2af 20px solid;
@@ -286,17 +533,15 @@ body {
   .column,
     .m-wide{
     max-width: 100% !important; }
-  .column.first > table td,
-  .column.last > table td,
-  .column.inner > table td{
-    padding-left: 20px !important;
-    padding-right: 20px !important; }
+  .m-coll-td{
+    padding-left: 10px !important;
+    padding-right: 10px !important; }
+  .l-row{
+    padding-left: 0px !important;
+    padding-right: 0px !important; }
   .m-tcenter{
     margin: 0 auto !important;
     float: none; }
-  .m-cover{
-    background-size: cover;
-    background-position: 50% 0; }
   .m-full{
     width: 100% !important;
     max-width: 100% !important;

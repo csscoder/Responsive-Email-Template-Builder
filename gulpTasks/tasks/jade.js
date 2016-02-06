@@ -21,7 +21,7 @@ gulp.task('jade', function () {
 gulp.task('jade-final', function () {
 	return gulp.src(config.src)
 		.pipe(jade({
-			pretty: false,
+			pretty: true,
 			data: {
 				final: true
 			}

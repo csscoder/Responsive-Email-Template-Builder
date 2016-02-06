@@ -7,40 +7,37 @@ block mainVariables
 //- include base template
 extends _jade-template.jade
 
-
-block title
-	title Email Builder Pro by CSSCODER
-
 //- BODY EMAIL
 block content
 
 	//- fist screen
-	+wrapper-bg('#3e615a', '#3e615a', "img/fone.jpg", 600, 443)
-		+row
-			+column-alone(5)
-				+roll(50)
-				.st-center
-					+a('http://csscoder.pro')
-						+img-inline('img/logo.png', 193, 33, "CSSCODER logo")
-				+roll(80)
-				.title.st-center HAVE A GOOD DAY
-				+roll(20)
-				+center
-					+table-align('center')
-						tr
-							+td(valign='middle',width='20%')
-								+hr('#788d8f', '2')
-							+td(width='50%').pl20.pr20
-								.sub-title.st-center  JUST FOR YOU ON GITHUB
-							+td(valign='middle',width='20%')
-								+hr('#788d8f', '2')
-				+roll(60)
-				.st-center
-					+button('https://github.com/csscoderRU/Responsive-Email-Template-Builder').st-button  GET YOUR COPY NOW
-				+roll(60)
+	+wrapper-bg('#f5f5f5', '#3e615a', "img/fone.jpg", 600, 443)
+		+center
+			+row
+				+column-alone(5)
+					+roll(50)
+					.st-center
+						+a('http://csscoder.pro')
+							+img-inline('img/logo.png', 193, 33, "CSSCODER logo")
+					+roll(80)
+					.title.st-center HAVE A GOOD DAY
+					+roll(20)
+					+center
+						+table-align('center')
+							tr
+								+td(valign='middle',width='20%')
+									+hr('#788d8f', '2')
+								+td(width='50%').pl20.pr20
+									.sub-title.st-center  JUST FOR YOU ON GITHUB
+								+td(valign='middle',width='20%')
+									+hr('#788d8f', '2')
+					+roll(60)
+					.st-center
+						+button('https://github.com/csscoderRU/Responsive-Email-Template-Builder').st-button  GET YOUR COPY NOW
+					+roll(60)
 	//- End fist screen
 	//- second screen
-	+wrapper('#eeeeef', '#eeeeef')
+	+wrapper('#f5f5f5', '#eeeeef')
 		+row
 			+roll(20)
 			+column-first(2)
@@ -80,7 +77,7 @@ block content
 			+roll(40)
 	//- End second screen
 	//- third screen
-	+wrapper('#f5f5f5', '#f5f5f5')
+	+wrapper('#f5f5f5')
 		+row
 			+column-first(3).st-left
 				+roll(40)
@@ -113,7 +110,7 @@ block content
 			+roll(40)
 	//- End third screen
 	//- fours screen
-	+wrapper('#eeeeef', '#eeeeef')
+	+wrapper('#f5f5f5', '#eeeeef')
 		+row
 			+column-alone(6).st-left
 				+roll(40)
@@ -139,7 +136,7 @@ block content
 
 	//- End fours screen
 	//- fives screen
-	+wrapper('#f5f5f5', '#f5f5f5')
+	+wrapper('#f5f5f5')
 		+row
 			+roll(20)
 			+column-first(3)
@@ -160,7 +157,7 @@ block content
 			+roll(40)
 	//- End fives screen
 	//- footer
-	+wrapper('#eeeeef', '#eeeeef')
+	+wrapper('#f5f5f5', '#eeeeef')
 		+row
 
 			+column-first(3).st-left.m-center
