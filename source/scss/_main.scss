@@ -37,3 +37,26 @@ table {
     border-right: #55c2af 20px solid;
 	}
 }
+
+.st-btn3 {
+	text-align: center;
+	$txtColor: #ffffff;
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	width: 100%;
+	color:  $txtColor !important;
+	span {
+		padding: 0 20px;
+		@include font(14px, 18px, $font1);
+		display: inline-block;
+		color: $txtColor;
+		vertical-align: top;
+	}
+}
+
+.btn-st3--1 {
+	span {
+		@include font(12px, 16px, $font1);
+	}
+}

@@ -1,0 +1,8 @@
+{
+  "ftp": {
+    "host": "yourIP",
+    "user": "USER_NAME",
+    "pass": "PASS_FTP",
+    "site": "URL_SITE"
+  }
+}

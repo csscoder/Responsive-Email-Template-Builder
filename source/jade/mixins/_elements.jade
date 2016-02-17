@@ -44,3 +44,26 @@ mixin button(link)
 	a&attributes(attributes)(href="#{link}", target="_blank").st-button
 		span
 			block
+
+//- Mixin
+mixin btn-st3(link, bgFone, staticWidth, paddingTopBottom, borderColor, borderWidth, radius, btnHeight)
+	- var link = (typeof link === 'undefined') ? "#3" : link
+	- var staticWidth = staticWidth - (borderWidth * 2)
+	- var ieWidth = staticWidth + (borderWidth * 2)
+	| <!--[if (gte mso 9)|(IE)]> <table width="#{ieWidth}" cellpadding="0" cellspacing="0"><tr><td width="#{ieWidth}" valign="top"> <![endif]-->
+	div(style="max-width: #{ieWidth}px; display: inline-block; width: 100%; vertical-align: top;")
+		table(cellpadding="0", cellspacing="0", border="0", style="border-collapse: separate;", width="100%")
+			tr
+				+td('center')(style="border: #{borderWidth}px solid #{borderColor}; border-radius: #{radius}px;" bgcolor=bgFone)
+					| <!--[if (gte mso 9)|(IE)]> <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#{link}" style="height: #{btnHeight}px; v-text-anchor:middle; width: #{staticWidth}px; " stroke="f" fillcolor="#{bgFone}"> <w:anchorlock/> <center> <![endif]-->
+					a&attributes(attributes)(href=link, target="_blank", style="max-width: #{staticWidth}px").st-btn3
+						|<!--[if (gte mso 9)|(IE)]><!-->
+						+roll(paddingTopBottom)
+						|<!-- <![endif]-->
+						span
+							block
+						|<!--[if (gte mso 9)|(IE)]><!-->
+						+roll(paddingTopBottom)
+						| <!-- <![endif]-->
+					| <!--[if (gte mso 9)|(IE)]></center> </v:rect> <![endif]-->
+	| <!--[if (gte mso 9)|(IE)]></td></tr></table> <![endif]-->
