@@ -4,7 +4,7 @@ var runSequence = require('run-sequence');
 // Default task
 gulp.task('default', function (cb) {
 	runSequence(
-		['jade', 'images', 'scss', 'watch'],
+		['pug', 'images', 'scss', 'watch'],
 		cb
 	);
 });
@@ -12,7 +12,7 @@ gulp.task('default', function (cb) {
 // Final task (ftp upload, inliner)
 gulp.task('final', function (cb) {
 	runSequence(
-		['jade-final','images'],
+		['pug-final','images'],
 		'postcss',
 		'include-style',
 		'inliner',

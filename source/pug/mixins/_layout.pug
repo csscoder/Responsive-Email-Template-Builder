@@ -9,9 +9,9 @@ mixin wrapper(bgcolor, bgcolorIn)
 			tr
 				+td('center', 'top', '100%')
 					| <!--[if (gte mso 9)|(IE)]><table width="#{width}" align="center"><tr><td><![endif]-->
-					table&attributes(attributes)(cellpadding="0", cellspacing="0", border="0", bgcolor=bgcolorIn, width="100%", style="max-width: #{width}px; background-color: #{bgcolorIn};")
+					table&attributes(attributes)(cellpadding="0", cellspacing="0", border="0", bgcolor=bgcolorIn, width="100%", style=`max-width: ${width}px; background-color: ${bgcolorIn};`)
 						tr
-							+td()(bgcolor=bgcolorIn, style="background-color: #{bgcolorIn}")
+							+td()(bgcolor=bgcolorIn, style=`background-color: ${bgcolorIn}`)
 								block
 					| <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
 
@@ -25,11 +25,11 @@ mixin wrapper-bg(bgcolor, bgcolorIn, url, imgW, imgH)
 		table(cellpadding="0", cellspacing="0", border="0", width="100%", bgcolor=bgcolor, align="center")
 			tr
 				+td('center', 'top', '100%')
-					| <!--[if (gte mso 9)|(IE)]><table width="#{width}" align="center"><tr><td><![endif]-->
-					table&attributes(attributes)(cellpadding="0", cellspacing="0", border="0", bgcolor=bgcolorIn, width="100%", style="max-width: #{width}px", background="#{url}" ).m-cover
+					| <!--[if (gte mso 9)|(IE)]><table width=`${width}` align="center"><tr><td><![endif]-->
+					table&attributes(attributes)(cellpadding="0", cellspacing="0", border="0", bgcolor=bgcolorIn, width="100%", style=`max-width: ${width}px`, background=`${url}` ).m-cover
 						tr
-							+td(background="#{url}").m-cover
-								| <!--[if (gte mso 9)|(IE)]> <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:#{imgW}px;height:#{imgH}px;"> <v:fill type="tile" src="#{url}" color="#{bgcolorIn}" /> <v:textbox inset="0,0,0,0"> <![endif]-->
+							+td(background=`${url}`).m-cover
+								| <!--[if (gte mso 9)|(IE)]> <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=`width:${imgW}px;height:${imgH}px;`> <v:fill type="tile" src=`${url}` color=`${bgcolorIn}` /> <v:textbox inset="0,0,0,0"> <![endif]-->
 								block
 								| <!--[if (gte mso 9)|(IE)]> </v:textbox> </v:rect> <![endif]-->
 					| <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
@@ -37,7 +37,7 @@ mixin wrapper-bg(bgcolor, bgcolorIn, url, imgW, imgH)
 //- Table block mixin
 mixin table(width, bgcolor)
 	- var width = (typeof width === 'undefined') ? "100%" : width
-	table&attributes(attributes)(cellpadding="0", cellspacing="0", border="0", width="#{width}", bgcolor=bgcolor)
+	table&attributes(attributes)(cellpadding="0", cellspacing="0", border="0", width=width, bgcolor=bgcolor)
 		block
 
 //- Table align mixin
@@ -68,16 +68,16 @@ mixin center()
 //- +roll(40)
 //- <div class="padd16" style="font-size: 16px; line-height: 16px; height: 16px;">&nbsp;</div>
 mixin roll(height)
-	- var height = (typeof height === 'undefined') ? "10" : height
-	div&attributes(attributes)(style="font-size: #{height}px; line-height: #{height}px; height: #{height}px;") &nbsp;
+	- var height = (typeof height === 'undefined') ? "10" : height;
+	div&attributes(attributes)(style=`font-size:${height}px; line-height: ${height}px; height: ${height}px;`) &nbsp;
 
 
 //- Main wrapper bg image fill
 mixin table-img(bgcolor, url, imgW, imgH)
 	+table&attributes(attributes)
 		tr
-			td(background="#{url}" bgcolor="#{bgcolor}" valign="top", style="background: url('#{url}'); background-repeat: no-repeat; background-color: #{bgcolor};").m-cover.m-td-img
-				| <!--[if gte mso 9]> <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" strokecolor="none" style="width:#{imgW}px;height:#{imgH}px;"><v:fill type="tile" src="#{url}" color="#{bgcolor}" /><v:textbox inset="0,0,0,0"><![endif]-->
+			td(background=url, bgcolor=bgcolor, valign="top", style=`background: url('${url}'); background-repeat: no-repeat; background-color: ${bgcolor};`).m-cover.m-td-img
+				| <!--[if gte mso 9]> <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" strokecolor="none" style=`width:${imgW}px;height:${imgH}px;`><v:fill type="tile" src=`${url}` color=`${bgcolor}` /><v:textbox inset="0,0,0,0"><![endif]-->
 				div
 					block
 				| <!--[if gte mso 9]></v:textbox></v:rect><![endif]-->

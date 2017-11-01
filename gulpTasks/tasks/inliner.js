@@ -3,9 +3,9 @@ var gulp = require('gulp');
 var config  = require('../config').inliner;
 var replace = require('gulp-replace');
 var inlineCss = require('gulp-inline-css');
-var access = require('../../.access.json').ftp;
+var access = require('../../access-ftp.json');
 
-var linkSite = access.site + '/emails/' + pkg.name + '/img/';
+var linkSite = access.site + pkg.name + '/img/';
 
 gulp.task('inliner', function () {
 	return gulp.src(config.src)

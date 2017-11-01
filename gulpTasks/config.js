@@ -40,12 +40,12 @@ module.exports = {
 		dest: build + '/img'
 	},
 
-	jade: {
+	pug: {
 		src: [
-			src + '/jade/*.jade',
-			'!' + src + '/jade/**/_*.jade'
+			src + '/pug/*.pug',
+			'!' + src + '/pug/**/_*.pug'
 		],
-		watch: [src + '/jade/*.jade'],
+		watch: [src + '/pug/*.pug'],
 		dest: build
 	},
 

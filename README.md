@@ -1,5 +1,5 @@
 # Responsive Email template<br> (extendable, framework)
-Build system use SASS, JADE preprocessors. Base is Gulp.js
+Build system use SASS, JADE preprocessors. Base on Gulp.js
 
 [![CSSCODER email template](https://raw.githubusercontent.com/csscoderRU/Responsive-Email-Template-Builder/master/screens/thumb.jpg)](http://dev.csscoder.pro/emails/Responsive-Email-Template-Builder/index.html)
 
@@ -19,15 +19,15 @@ Steps use system
     
     gulp final
     
-Also you must create file **.access.json** in root project folder
+Also you must rename  file **access-ftp-Example.json** to **access-ftp.json** like this
 
     {
-      "ftp": {
-        "host": "test.com(IP)",
-        "user": "user-test-FTP",
-        "pass": "passwordToFTP",
-        "site": "linkToSiteView"
-      }
+      "host": "test.com(IP)",
+      "port": 22,
+      "user": "user-test-FTP",
+      "pass": "passwordToSFTP",
+      "site": "linkToSiteView",
+      "rootPath": "ROOT_PATH_ON_SERVER"
     }
 
 Template tests from Litmus.com

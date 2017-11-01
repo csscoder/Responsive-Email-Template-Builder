@@ -550,34 +550,34 @@ table {
   line-height: 16px;
   font-family: Arial, Helvetica, sans-serif; }
 
-@media only screen and (max-width: 600px){
-  .column,
-    .m-wide{
-    max-width: 100% !important; }
-  .m-coll-td{
+@media only screen and (max-width: 600px) {
+    .column,
+    .m-wide {
+      max-width: 100% !important; }
+  .m-coll-td {
     padding-left: 10px !important;
     padding-right: 10px !important; }
-  .l-row{
+  .l-row {
     padding-left: 0px !important;
     padding-right: 0px !important; }
-  .m-tcenter{
+  .m-tcenter {
     margin: 0 auto !important;
     float: none; }
-  .m-full{
+  .m-full {
     width: 100% !important;
     max-width: 100% !important;
     min-width: 124px !important;
     height: auto;
     clear: both; }
-  .m-center{
+  .m-center {
     text-align: center !important; }
-  .m-left{
+  .m-left {
     text-align: left !important; }
-  .m-right{
+  .m-right {
     text-align: right !important; }
-  .m-hide{
+  .m-hide {
     display: none !important; }
-  .mobile-only{
+  .mobile-only {
     visibility: visible !important;
     height: auto !important;
     max-width: none !important;

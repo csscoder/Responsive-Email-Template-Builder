@@ -1,26 +1,26 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var plumber = require('gulp-plumber');
-var config = require('../config').jade;
-var jade = require('gulp-jade');
+var config = require('../config').pug;
+var pug = require('gulp-pug');
 
-gulp.task('jade', function () {
+gulp.task('pug', function () {
 	return gulp.src(config.src)
 		.pipe(plumber({
 			errorHandler: function (err) {
 				console.log(err);
 			}
 		}))
-		.pipe(jade({
-			pretty: false
+		.pipe(pug({
+			pretty: true
 		}))
 		.pipe(gulp.dest(config.dest))
 		.pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('jade-final', function () {
+gulp.task('pug-final', function () {
 	return gulp.src(config.src)
-		.pipe(jade({
+		.pipe(pug({
 			pretty: true,
 			data: {
 				final: true

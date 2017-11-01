@@ -1,0 +1,8 @@
+{
+  "host": "test.com(IP)",
+  "port": 22,
+  "user": "user-test-FTP",
+  "pass": "passwordToSFTP",
+  "site": "linkToSiteView",
+  "rootPath": "ROOT_PATH_ON_SERVER"
+}

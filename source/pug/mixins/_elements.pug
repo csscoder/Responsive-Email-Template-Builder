@@ -35,13 +35,13 @@ mixin img-inline(src, width, height, alt)
 //- hr
 mixin hr(color, height, width)
 	- var width = (typeof width === 'undefined') ? "100%" : width
-	table(cellpadding="0", cellspacing="0", border="0", width="#{width}", align="center")
+	table(cellpadding="0", cellspacing="0", border="0", width=width, align="center")
 		tr
-			+td(style="width: 100%; border-top: #{color} solid #{height}px ")
+			+td(style=`width: 100%; border-top: ${color} solid ${height}px;`)
 				+roll(1)
 
 mixin button(link)
-	a&attributes(attributes)(href="#{link}", target="_blank").st-button
+	a&attributes(attributes)(href=link, target="_blank").st-button
 		span
 			block
 
@@ -51,12 +51,12 @@ mixin btn-st3(link, bgFone, staticWidth, paddingTopBottom, borderColor, borderWi
 	- var staticWidth = staticWidth - (borderWidth * 2)
 	- var ieWidth = staticWidth + (borderWidth * 2)
 	| <!--[if (gte mso 9)|(IE)]> <table width="#{ieWidth}" cellpadding="0" cellspacing="0"><tr><td width="#{ieWidth}" valign="top"> <![endif]-->
-	div(style="max-width: #{ieWidth}px; display: inline-block; width: 100%; vertical-align: top;")
+	div(style=`max-width: ${ieWidth}px; display: inline-block; width: 100%; vertical-align: top;`)
 		table(cellpadding="0", cellspacing="0", border="0", style="border-collapse: separate;", width="100%")
 			tr
-				+td('center')(style="border: #{borderWidth}px solid #{borderColor}; border-radius: #{radius}px;" bgcolor=bgFone)
-					| <!--[if (gte mso 9)|(IE)]> <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#{link}" style="height: #{btnHeight}px; v-text-anchor:middle; width: #{staticWidth}px; " stroke="f" fillcolor="#{bgFone}"> <w:anchorlock/> <center> <![endif]-->
-					a&attributes(attributes)(href=link, target="_blank", style="max-width: #{staticWidth}px").st-btn3
+				+td('center')(style=`border: ${borderWidth}px solid ${borderColor}; border-radius: ${radius}px;` bgcolor=bgFone)
+					| <!--[if (gte mso 9)|(IE)]> <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#{link}" style="height: #{btnHeight}px; v-text-anchor:middle; width: #{staticWidth}px;" stroke="f" fillcolor="#{bgFone}"> <w:anchorlock/> <center> <![endif]-->
+					a&attributes(attributes)(href=link, target="_blank", style=`max-width: ${staticWidth}px`).st-btn3
 						|<!--[if (gte mso 9)|(IE)]><!-->
 						+roll(paddingTopBottom)
 						|<!-- <![endif]-->
