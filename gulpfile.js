@@ -13,7 +13,6 @@ const beautify = require('gulp-jsbeautifier');
 const del = require('del');
 const pug = require('gulp-pug');
 const clearingHTML = require('gulp-email-remove-unused-css');
-const gutil = require('gulp-util');
 const vftp = require('vinyl-ftp');
 const fs = require('fs');
 
@@ -219,7 +218,6 @@ const browser = Browser.create();
         pass: ftpPass.auth.pass,
         port: ftpPass.port,
         parallel: 1,
-        log: gutil.log,
         remotePath: `${ftpPass.remotePath}/${pkg.name}/`
       };
       const gulpFTP = vftp.create(configFTP);
