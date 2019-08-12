@@ -1,0 +1,98 @@
+/* latin */
+@media screen {
+  @font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), local('sans-serif-condensed'), url(https://fonts.gstatic.com/s/robotocondensed/v18/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7DQk6YvM.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  .webfont {
+    font-family: 'Roboto Condensed', Arial, sans-serif !important;
+  }
+}
+
+
+.title {
+  font-weight: 400;
+  color: #fff;
+  @include font(40px, 32px);
+  @include mobile {
+    font-size: 30px !important;
+    line-height: 30px !important;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.sub-title {
+  font-weight: 400;
+  color: #bbdefb;
+  @include font(18px, 20px);
+}
+
+.title-h2 {
+  color: #212121;
+  @include font(20px, 22px);
+  @include mobile {
+    font-size: 16px !important;
+    line-height: 18px !important;
+  }
+}
+
+.main-text {
+  @include font(16px, 22px);
+  color: #757575;
+
+  @include mobile {
+    font-size: 14px !important;
+    line-height: 16px !important;
+  }
+
+  a {
+    color: #1976d2;
+
+    span {
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer {
+  @include font(12px, 14px);
+  text-align: center;
+  color: #757575;
+
+  a {
+    color: #757575;
+    text-decoration: none;
+  }
+}
+
+
+// button
+.btn-st1 {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  width: 100%;
+
+  a {
+    color: #fff;
+  }
+
+  span {
+    color: #fff;
+    padding: 0 20px;
+    @include font(19px, 20px);
+    display: inline-block;
+    font-weight: normal;
+    vertical-align: top;
+  }
+}
+

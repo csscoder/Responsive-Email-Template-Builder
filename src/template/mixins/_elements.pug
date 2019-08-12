@@ -1,0 +1,93 @@
+//- +a('http://ya.ru') link   -->  <a href="http://ya.ru" target="_blank">...</a>
+//- not for text link
+//- view bellow
+mixin a(link)
+  - var link = (typeof link === 'undefined') ? "#3" : link
+  a&attributes(attributes)(href=link, target="_blank")
+    block
+
+//- +a('http://ya.ru') link   -->  <a href="http://ya.ru" target="_blank"><span>link</span></a>
+//- text link
+mixin a-text(link)
+  - var link = (typeof link === 'undefined') ? "#3" : link
+  a&attributes(attributes)(href=link, target="_blank")
+    span
+      block
+
+
+//- +img('img/logo.png', 100, 200) -->
+//- <img src="img/logo.png" width="100" height="200" border="0" style="display:block; line-height: 100%;" />
+mixin img(src, width, height, alt)
+  if alt
+    img&attributes(
+      attributes)(src=src, width=width, height=height, border="0", style="display:block; line-height: 100%;", alt=alt)
+  else
+    img&attributes(
+      attributes)(src=src, width=width, height=height, border="0", style="display:block; line-height: 100%;")
+
+//- +img-inline('img/logo.png', 100, 200) -->
+//- <img src="img/logo.png" width="100" height="200" border="0" style="vertical-align: top;" />
+mixin img-inline(src, width, height, alt)
+  if alt
+    img&attributes(attributes)(src=src, width=width, height=height, border="0", style="vertical-align: top;", alt=alt)
+  else
+    img&attributes(attributes)(src=src, width=width, height=height, border="0", style="vertical-align: top;")
+
+
+//- hr
+mixin hr(color, height, width)
+  - var width = (typeof width === 'undefined') ? "100%" : width
+  table(cellpadding="0", cellspacing="0", border="0", width=width, align="center")
+    tr
+      +td(style=`width: 100%; border-top: ${color} solid ${height}px;`)
+        +roll(1)
+
+mixin button(link)
+  a&attributes(attributes)(href=link, target="_blank").st-button
+    span
+      block
+
+mixin btn-st1(link, bgFone, staticWidth, staticHeight, paddingTB )
+  - var link = (typeof link === 'undefined') ? "#3" : link
+
+  | <!--[if (gte mso 9)|(IE)]> <table width="#{staticWidth}" cellpadding="0" cellspacing="0"><tr><td width="#{staticWidth}" valign="top"> <![endif]-->
+  div(style=`max-width: ${staticWidth}px; display: inline-block; width: 100%; vertical-align: top;`)
+    table(cellpadding="0", cellspacing="0", border="0", style="border-collapse: separate;", width="100%")
+      tr
+        +td('center')(bgcolor=bgFone)
+          | <!--[if (gte mso 9)|(IE)]> <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#{link}" style="height: #{staticHeight}px; v-text-anchor:middle; width: #{staticWidth}px;" stroke="f" fillcolor="#{bgFone}"> <w:anchorlock/> <center> <![endif]-->
+          a&attributes(attributes)(href=link, target="_blank", style=`max-width: ${staticWidth}px`).btn-st1
+            | <!--[if (gte mso 9)|(IE)]><!-->
+            +roll(paddingTB)
+            | <!-- <![endif]-->
+            span
+              block
+            | <!--[if (gte mso 9)|(IE)]><!-->
+            +roll(paddingTB)
+            | <!-- <![endif]-->
+          | <!--[if (gte mso 9)|(IE)]></center> </v:rect> <![endif]-->
+  | <!--[if (gte mso 9)|(IE)]></td></tr></table> <![endif]-->
+
+
+//- Mixin
+mixin btn-st3(link, bgFone, staticWidth, paddingTopBottom, borderColor, borderWidth, radius, btnHeight)
+  - var link = (typeof link === 'undefined') ? "#3" : link
+  - var staticWidth = staticWidth - (borderWidth * 2)
+  - var ieWidth = staticWidth + (borderWidth * 2)
+  | <!--[if (gte mso 9)|(IE)]> <table width="#{ieWidth}" cellpadding="0" cellspacing="0"><tr><td width="#{ieWidth}" valign="top"> <![endif]-->
+  div(style=`max-width: ${ieWidth}px; display: inline-block; width: 100%; vertical-align: top;`)
+    table(cellpadding="0", cellspacing="0", border="0", style="border-collapse: separate;", width="100%")
+      tr
+        +td('center')(style=`border: ${borderWidth}px solid ${borderColor}; border-radius: ${radius}px;` bgcolor=bgFone)
+          | <!--[if (gte mso 9)|(IE)]> <v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#{link}" style="height: #{btnHeight}px; v-text-anchor:middle; width: #{staticWidth}px;" stroke="f" fillcolor="#{bgFone}"> <w:anchorlock/> <center> <![endif]-->
+          a&attributes(attributes)(href=link, target="_blank", style=`max-width: ${staticWidth}px`).st-btn3
+            | <!--[if (gte mso 9)|(IE)]><!-->
+            +roll(paddingTopBottom)
+            | <!-- <![endif]-->
+            span
+              block
+            | <!--[if (gte mso 9)|(IE)]><!-->
+            +roll(paddingTopBottom)
+            | <!-- <![endif]-->
+          | <!--[if (gte mso 9)|(IE)]></center> </v:rect> <![endif]-->
+  | <!--[if (gte mso 9)|(IE)]></td></tr></table> <![endif]-->

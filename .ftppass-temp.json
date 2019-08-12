@@ -1,0 +1,9 @@
+{
+  "auth": {
+    "user": "your_user",
+    "pass": "your_pass"
+  },
+  "host": "host",
+  "port": 21,
+  "remotePath": "/remote-pass/"
+}

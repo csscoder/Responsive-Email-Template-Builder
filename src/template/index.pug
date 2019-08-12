@@ -1,0 +1,81 @@
+//- include base template
+extends layout/_layout
+
+//- Base setting size layout
+block mainVariables
+  - var gGutter = 20; //- gutter columns
+  - var gContainer = 640; //- width container
+  - var gColumns = 6; //- size column
+
+//- BODY EMAIL
+block content
+
+  //- fist screen
+  +wrapper('#BBDEFB')
+    +table('100%', '#BBDEFB')
+      tr
+        +td.pl-20.pr-20
+
+          +roll(20)
+
+          +table('100%', '#2196F3')
+            tr
+              +td.pl-40.pr-40.m-center.text-right.m-coll-td
+                +roll(30)
+                .sub-title.webfont Responsive Email Template
+                +roll(10)
+                .title.webfont
+                  +a("https://emailcoder.pro")
+                    | EMAILCODER.PRO
+                +roll(30)
+
+          +table('100%', '#ffffff')
+            tr
+              +td.pl-40.pr-40.m-coll-td-full
+                +roll(30)
+                .title-h2
+                  | Welcome to simple Email Responsive template!
+                +roll(20)
+                .main-text
+                  | Hey there! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel nulla vehicula, vehicula est interdum, accumsan purus. In sed consequat erat. Donec consectetur vestibulum laoreet. Maecenas pulvinar vulputate sagittis. Praesent et posuere odio. Sed hendrerit vehicula mi, elementum scelerisque augue interdum dignissim.
+                +roll(16)
+                .main-text
+                  | Nam in tellus et nibh interdum posuere in
+                  =" "
+                  +a-text("https://google.com") Aliquam commodo
+                  =" "
+                  | ., sem at porta varius, dui nunc mattis tortor, nec pellentesque orci mi ornare nunc. Quisque at arcu vitae tortor posuere imperdiet nec pulvinar felis. In mattis, ante eget lobortis auctor, risus magna rhoncus mauris, et finibus nisi risus id sapien.
+
+                +roll(40)
+                +center
+                  +btn-st1("https://csscoder.pro/contact", "#FF5722", 250, 52, 16)
+                    .webfont CONTACT ME
+                +roll(40)
+                +table-align("center")
+                  tr
+                    +td.pr-10
+                      +a("https://www.facebook.com/csscoder")
+                        +img-inline("img/facebook.png", 40, 40, "facebook")
+                    +td.pr-10
+                      +a("https://github.com/csscoderRU")
+                        +img-inline("img/github.png", 40, 40, "github")
+                    +td.pr-10
+                      +a("https://www.linkedin.com/in/csscoder/")
+                        +img-inline("img/linkedin.png", 40, 40, "linkedin")
+                    +td
+                      +a("https://twitter.com/csscoder")
+                        +img-inline("img/twitter.png", 40, 40, "twitter")
+                +roll(40)
+
+          +table("100%", "#bbdefb")
+            tr
+              +td
+                +roll(24)
+                .footer.text-center.webfont
+                  | &copy;
+                  =" "
+                  +a-text("https://emailcoder.pro") EMAILCODER.PRO
+          +roll(24)
+
+//- END BODY EMAIL
+

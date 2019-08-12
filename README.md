@@ -1,36 +1,37 @@
 # Responsive Email template<br> (extendable, framework)
-Build system use SASS, JADE preprocessors. Base on Gulp.js
 
-[![CSSCODER email template](https://raw.githubusercontent.com/csscoderRU/Responsive-Email-Template-Builder/master/screens/thumb.jpg)](http://dev.csscoder.pro/emails/Responsive-Email-Template-Builder/index.html)
+Some times we need some simple email templates, for example I use it on a good service [Mailgun](https://mailgun.com) for testing contact form, subscribe or other needed features.
 
-### Example [link](http://dev.csscoder.pro/emails/Responsive-Email-Template-Builder/index.html)
+Here you can take HTML files with inlined CSS in folder ```/build```.
+
+You can build something else yourself - it's easy. Build system works by SCSS, PUG preprocessors. Base on Gulp.js
 
 Steps use system
 
-    // 1 install node modules
+Build system use SASS, JADE preprocessors. Base on Gulp.js
+
+[![CSSCODER email template](https://raw.githubusercontent.com/csscoderRU/Responsive-Email-Template-Builder/master/screens/email-template-preview.png)](http://222828.selcdn.com/temp-mail-images/simple-email-template/index-inline.html)
+
+### Example [link](http://222828.selcdn.com/temp-mail-images/simple-email-template/index-inline.html)
+
+
+Steps use template builder
+
+	// 1 check node version - it's work for "node": ">=10.0.0 =<10.16.0", and install dependencies
     
     npm install
     
-    // 2 build template
+    // 2 run dev mode (after that will be run local server http://localhost:7777)
     
-    gulp
+    npm run dev
      
-    // 3 load images to server (ftp)
+    // Build your email templates (with inlined css) you will find it in  "./build" folder
+    // before this task you must setup remote url for your images look at this file "./src/config.js" section "urlImageHost"
     
-    gulp final
+    npm run build
     
-Also you must rename  file **access-ftp-Example.json** to **access-ftp.json** like this
 
-    {
-      "host": "test.com(IP)",
-      "port": 22,
-      "user": "user-test-FTP",
-      "pass": "passwordToSFTP",
-      "site": "linkToSiteView",
-      "rootPath": "ROOT_PATH_ON_SERVER"
-    }
-
-Template tests from Litmus.com
+Template tested by [emailonacid.com](https://emailonacid.com)
 * Outloolk 2000-2016
 * Lotus Notes 8 - 9
 * Thunderbird

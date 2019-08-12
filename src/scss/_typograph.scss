@@ -1,0 +1,128 @@
+.text-center {
+  text-align: center;
+}
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-just {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+/*Align text block*/
+.st-center {
+  text-align: center;
+}
+
+.st-left {
+  text-align: left;
+}
+
+.st-right {
+  text-align: right;
+}
+
+.st-just {
+  text-align: justify;
+}
+//
+//// titles
+//.title {
+//  @include font(38px, 50px, $font2);
+//  font-weight: bold;
+//  //color: #ffffff;
+//}
+//.sub-title {
+//  color: #ffffff;
+//  @include font(11px, 16px, $font2);
+//}
+//
+//.post-title {
+//  @include font(20px, 31px, $font2);
+//  font-size: 20px;
+//  font-weight: 600;
+//}
+//
+//.group-title {
+//  @include font(16px, 20px, $font2);
+//  color: #40474e;
+//  font-weight: 700;
+//}
+//.group-text {
+//  @include font(14px, 20px, $font2);
+//  color: #787b80;
+//
+//  a {
+//    color: #57c3af;
+//    text-decoration: underline;
+//  }
+//}
+//.post-text {
+//  @include font(14px, 29px, $font2);
+//}
+
+.word-break {
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+//
+//.footer-text {
+//  @include font(14px, 23px, $font2);
+//  color: #ffffff;
+//}
+//
+//.copyright-text {
+//  @include font(14px, 23px, $font2);
+//  color: #959595;
+//  font-weight: 500;
+//}
+//.st-footer {
+//  color: #aaacaf;
+//  @include font(12px, 16px, $font2);
+//  a {
+//    text-decoration: underline !important;
+//    color: #aaacaf;
+//  }
+//}
+
+/*****************************/
+/*MOBILE SECTION*/
+/*****************************/
+
+/*Align text mobile*/
+.m-center {
+	@include mobile {
+		text-align: center !important;
+	}
+}
+
+.m-left {
+	@include mobile {
+		text-align: left !important;
+	}
+}
+
+.m-right {
+	@include mobile {
+		text-align: right !important;
+	}
+}
+
+

@@ -1,0 +1,40 @@
+@mixin mobile {
+	@media only screen and (max-width: 600px) {
+		@content ;
+	}
+}
+
+@function _strip-units($unit) {
+  @return $unit / ($unit * 0 + 1);
+}
+
+@mixin font($fz, $lh: false, $family: false) {
+	font-size: #{_strip-units($fz)}px;
+
+	@if $lh == false {
+		line-height: #{round(_strip-units($fz) * 1.4)}px;
+	} @else {
+		line-height: #{_strip-units($lh)}px;
+	}
+	@if $family == false {
+		font-family: $font1;
+	} @else {
+		font-family: $family;
+	}
+}
+
+@mixin font-important($fz, $lh: false, $family: false) {
+	font-size: #{_strip-units($fz)}px !important;
+
+	@if $lh == false {
+		line-height: #{round(_strip-units($fz) * 1.4)}px !important;
+	} @else {
+		line-height: #{_strip-units($lh)}px !important;
+	}
+	@if $family == false {
+		font-family: $font1 !important;
+	} @else {
+		font-family: $family !important;
+	}
+}
+
