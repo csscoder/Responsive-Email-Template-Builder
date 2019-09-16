@@ -2,7 +2,7 @@
 
 # Responsive Email template<br> (extendable, framework)
 
-[![CSSCODER email template](https://raw.githubusercontent.com/csscoderRU/Responsive-Email-Template-Builder/master/screens/Browserstack-logo@2x.png){:width="200px"}](https://www.browserstack.com)
+[![CSSCODER email template](https://raw.githubusercontent.com/csscoderRU/Responsive-Email-Template-Builder/master/screens/Browserstack-logo@2x.png | width=200)](https://www.browserstack.com)
 
 Some times we need some simple email templates, for example I use it on a good service [Mailgun](https://mailgun.com) for testing contact form, subscribe or other needed features.
 
