@@ -46,7 +46,7 @@
     "gulp-rename": "2.0.0",
     "gulp-replace": "1.0.0",
     "gulp-sass": "4.1.0",
-    "postcss": "8.1.4",
+    "postcss": "8.2.10",
     "prettier": "2.1.2",
     "vinyl-ftp": "0.6.1"
   },
